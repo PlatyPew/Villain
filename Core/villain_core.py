@@ -239,7 +239,10 @@ class Payload_Generator:
 			print(f'{ORANGE}Copied to clipboard!{END}')
 
 		except:
-			print(f'{RED}Copy to clipboard failed. You need to do it manually.{END}')
+			from base64 import b64encode
+			from subprocess import run
+			contents = b64encode(payload.data.encode()).decode()
+			run(f"printf '\\e]52;c;{contents}\007'", shell=True)
 
 		# Disengage payload template
 		del payload, template
