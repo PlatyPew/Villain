@@ -1516,7 +1516,7 @@ def main():
 					continue
 		
 		
-		except KeyboardInterrupt:
+		except (KeyboardInterrupt, EOFError):
 			
 			if not Main_prompt.ready:
 				Main_prompt.ready = True
