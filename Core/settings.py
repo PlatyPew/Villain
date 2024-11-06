@@ -2,7 +2,7 @@
 #
 # Author: Panagiotis Chartas (t3l3machus) 
 #
-# This script is part of the Villain framework: 
+# This script is part of the "Villain C2 Framework": 
 # https://github.com/t3l3machus/Villain
 
 
@@ -13,9 +13,12 @@ from time import sleep
 
 class Threading_params:
 	
-	MAX_THREADS = 100
+	MAX_THREADS = 140
 	thread_limiter = BoundedSemaphore(MAX_THREADS)
 
+
+class Villain:
+	version = "2.2.1"
 
 
 class Core_Server_Settings:
@@ -91,9 +94,9 @@ class TCP_Sock_Handler_Settings:
 
 
 class Payload_Generator_Settings:
-	
+	pass
 	# Set to false in order to parse domains as LHOST when generating commands
-	validate_lhost_as_ip = True	
+	# validate_lhost_as_ip = True --> DEPRECATED
 
 
 
